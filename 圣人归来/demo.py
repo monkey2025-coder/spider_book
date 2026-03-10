@@ -57,7 +57,7 @@ def get_chapter_content(url):
             if "下一页" not in next_response.text:
                 break
     
-    with open(f"{chapter_title}.txt", "w", encoding="utf-8") as f:
+    with open(f"./小说本体/{chapter_title}.txt", "w", encoding="utf-8") as f:
         f.write(chapter_title + "\n\n")
         f.write("\n".join(total_content))
 
